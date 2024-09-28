@@ -67,6 +67,7 @@ function longString() {
 
 // console.log(longString());
 
+// =============================================================
 // Take an array of strings, and a number and return an array of the strings that
 //  are longer than the given number.
 
@@ -106,24 +107,48 @@ const arrayOfStrNum = [
 // console.log(sorted[0]);
 
 function longStringNum(long, Numlength) {
-    return long.filter(str => str.length > Numlength);
+  return long.filter((str) => str.length > Numlength);
 }
 const maxLength = 4;
 
 const results = longStringNum(arrayOfStrNum, maxLength);
 console.log(results);
 
-
 //======================================
 
-//Take a number, n, and print every number 
+//Take a number, n, and print every number
 // between 1 and n without using loops. Use recursion.
 
-function printNum (n) {
-if(n <= 0) {
+function printNum(n) {
+  if (n <= 0) {
     return;
+  }
+  console.log(n);
+  printNum(n - 1);
 }
-console.log(n)
-printNum(n - 1);
-}
-printNum(15)
+printNum(15);
+
+console.log("//==================NEXT=======================//")
+
+//============================================================
+
+// Part 2: Thinking Methodically
+// When functions are built into objects, like Arrays,
+// they are referred to as “methods” of those objects. Many methods,
+//  including Array methods, require
+//  “callback functions” to determine their behavior.
+
+const employees =
+  [
+    ({ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" })
+  ];
+
+  // Sort the array by age
+
+  employees.sort((a, b) => a - b);
+  console.log(employees)
+
