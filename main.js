@@ -185,3 +185,17 @@ const filterBy50 = employees.filter(employees => {
 }) 
 console.log("=========filtered by grater than 50 but tried 20 ==========")
 console.log(filterBy50);
+
+
+// Map the array to change the “occupation” key to “job” and increment every age by 1
+
+const changeOccupation = employees.map(employees => {
+    const changeToJob = employees['Job'];
+    return changeToJob;
+})
+
+console.log(changeOccupation);
+
+
+const mapOut = employees.map(employees => employees.age + 1)
+console.log(mapOut);
