@@ -139,11 +139,11 @@ console.log("//==================NEXT=======================//");
 //  “callback functions” to determine their behavior.
 
 const employees = [
-  ({ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+  { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
   { id: "48", name: "Barry", occupation: "Runner", age: "25" },
   { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
   { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
-  { id: "7", name: "Bilbo", occupation: "None", age: "111" }),
+  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
 ];
 
 // Sort the array by age
@@ -172,4 +172,16 @@ const employees = [
 
 employees.sort((a, b) => a.age - b.age);
 
+console.log("=========sorted by age==========")
 console.log(employees);
+
+//=====================================
+// Filter the array to remove entries with an age greater than 50.
+
+
+const filterBy50 = employees.filter(employees => {
+    const isGreater = employees.age > 20
+    return isGreater
+}) 
+console.log("=========filtered by grater than 50 but tried 20 ==========")
+console.log(filterBy50);
