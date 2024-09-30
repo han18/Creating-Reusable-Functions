@@ -128,7 +128,7 @@ function printNum(n) {
 }
 printNum(15);
 
-console.log("//==================NEXT=======================//")
+console.log("//==================NEXT=======================//");
 
 //============================================================
 
@@ -138,17 +138,38 @@ console.log("//==================NEXT=======================//")
 //  including Array methods, require
 //  “callback functions” to determine their behavior.
 
-const employees =
-  [
-    ({ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
-    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
-    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
-    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
-    { id: "7", name: "Bilbo", occupation: "None", age: "111" })
-  ];
+const employees = [
+  ({ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+  { id: "7", name: "Bilbo", occupation: "None", age: "111" }),
+];
 
-  // Sort the array by age
+// Sort the array by age
 
-  employees.sort((a, b) => a - b);
-  console.log(employees)
+//   employees.sort((a, b) => a - b [age]);
+//   console.log(employees)
 
+// orderBy(employees, "age", "asc").map(({ age }) => age);
+
+// console.log(orderBy)
+
+
+// function sortAge () {
+//     return employees.sort((a, b) => {
+//       const aAge = employees(a.age)
+//       const bAge = employees(b.age)
+  
+//       return aAge - bAge
+//     })
+  
+//   }
+
+//   console.log(sortAge());
+
+//   console.log(employees)
+
+employees.sort((a, b) => a.age - b.age);
+
+console.log(employees);
