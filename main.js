@@ -223,6 +223,7 @@ console.log(newEmployee);
 // Use the reduce method to calculate the sum of the ages.
 // Then use the result to calculate the average age.
 const calSum = newEmployee.reduce((sum, newEmployee) => sum + parseInt(newEmployee.age), 0);
-
-const 
 console.log(calSum);
+const totalAvarge = calSum / newEmployee.length;
+console.log(totalAvarge);
+
