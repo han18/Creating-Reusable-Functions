@@ -209,12 +209,20 @@ console.log(newMap)
 // employees.forEach(employees => console.log(employees.occupation = "Job"));
 
 
-const ChangeOccupation = employees.map(employees => ({
+const newEmployee = employees.map(employees => ({
     id: employees.id,
     name: employees.name,
     job: employees.occupation,
     age: parseInt(employees.age) + 1,
 }))
 
-console.log(ChangeOccupation);
+console.log(newEmployee);
 // console.log(employees);
+
+
+// Use the reduce method to calculate the sum of the ages.
+// Then use the result to calculate the average age.
+const calSum = newEmployee.reduce((sum, newEmployee) => sum + parseInt(newEmployee.age), 0);
+
+const 
+console.log(calSum);
