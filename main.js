@@ -138,7 +138,7 @@ console.log("//==================NEXT=======================//");
 //  including Array methods, require
 //  “callback functions” to determine their behavior.
 
-const employees = [
+let employees = [
   { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
   { id: "48", name: "Barry", occupation: "Runner", age: "25" },
   { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
@@ -187,7 +187,7 @@ console.log("=========filtered by grater than 50 but tried 20 ==========")
 console.log(filterBy50);
 
 
-// Map the array to change the “occupation” key to “job” and increment every age by 1
+//===== Map the array to change the “occupation” key to “job” and increment every age by 1
 
 const changeOccupation = employees.map(employees => {
     const changeToJob = employees['Job'];
@@ -196,6 +196,25 @@ const changeOccupation = employees.map(employees => {
 
 console.log(changeOccupation);
 
-
+//this code just added 1 to the numbers and did not increment age by 1
 const mapOut = employees.map(employees => employees.age + 1)
 console.log(mapOut);
+
+//will use object.keys to map the keys
+let newMap = Object.keys(employees);
+console.log(newMap)
+
+
+// I changed the occupation's name but did not change the full array of objects
+// employees.forEach(employees => console.log(employees.occupation = "Job"));
+
+
+const ChangeOccupation = employees.map(employees => ({
+    id: employees.id,
+    name: employees.name,
+    job: employees.occupation,
+    age: parseInt(employees.age) + 1,
+}))
+
+console.log(ChangeOccupation);
+// console.log(employees);
